@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+   Home
+{% endblock %}
+
+{% block main %}
+   <style type="text/css">
+      body{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      }
+      a:link {
+      text-decoration:none;
+      margin: 10px;
+      }
+   </style>
+
+
+
+
+
+   <br>
+
+   <img id="fundo" src="{% static 'fundo.png' %}" width="600">
+
+{% endblock %}

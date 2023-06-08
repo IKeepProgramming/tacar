@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+   Home
+{% endblock %}
+
+{% block main %}
+   <style type="text/css">
+      body{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      }
+      a:link {
+      text-decoration:none;
+      margin: 10px;
+      }
+   </style>
+   <h3>TAcar - Estacionamento</h3>
+   <a href="/">Home</a>
+   <a href="/cadastro_cliente/">Cadastro cliente</a>
+   <a href="listagem_clientes/">Listagem clientes</a>
+   <a href="/cadastro_veiculo">Cadastro veiculo</a>
+   <a href="/listagem_veiculos">Listagem veiculos</a>
+   <a href="/cadastro_fabricante">Cadastro fabricante</a>
+   <a href="/listagem_fabricantes">Listagem fabricantes</a>
+   <a href="/cadastro_tabela">Cadastro tabela</a>
+   <a href="/listagem_tabelas">Listagem tabelas</a>
+   <a href="/cadastro_rotativo">Cadastro rotativos</a>
+   <a href="/listagem_rotativos">Listagem rotativos</a>
+   <a href="/cadastro_mensalista">Cadastro mensalista</a>
+   <a href="/listagem_mensalistas">Listagem mensalistas</a>
+
+
+   {% if user.get_username %}
+      Usuário: {{ user.get_username }} (<a href="/accounts/logout">logout</a> | <a href="/admin">admin</a>)
+   {% else %}
+      Usuário não autenticado ( <a href="/accounts/login/">login</a> | <a href="/accounts/registrar">registrar</a>)
+   {% endif %}
+
+   <br>
+
+   <img id="fundo" src="{% static 'fundo.png' %}" width="600">
+
+{% endblock %}
